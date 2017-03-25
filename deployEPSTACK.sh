@@ -163,5 +163,12 @@ sudo pm2 restart all
 ## Runs RepDB, ReverseDNS and other jobs
 sudo apt-get install python-pip supervisor -y
 sudo pip install elasticsearch-curator
+## Simple Logstash config to collect system logs
+sudo cp ./00-system_logs.conf /etc/logstash/conf.d/00-system_logs.conf
+## Edit Kibana settings to work with Nginx
+sudo sed -i 's|#elasticsearch.url|elasticsearch.url|g' /etc/kibana/kibana.yml
+sudo sed -i 's|#server.host|server.host|g' /etc/kibana/kibana.yml
+sudo sed -i 's|#server.basePath: ""|server.basePath: "/kibana4"|g' /etc/kibana/kibana.yml
+sudo sed -i 's|#server.port|server.port|g' /etc/kibana/kibana.yml
 ##
 echo "Please reboot this system"
