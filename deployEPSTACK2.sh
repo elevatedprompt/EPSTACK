@@ -161,7 +161,7 @@ cd /opt/Notify_API
 sudo npm install
 sudo pm2 start index.js --name epstack-Notify-API
 sudo pm2 dump
-sudo pm2 startup ubuntu
+sudo pm2 startup ubuntu14
 sudo su -c "chmod +x /etc/init.d/pm2-init.sh && update-rc.d pm2-init.sh defaults"
 sudo cp /opt/API/configuration.json.sam /opt/API/configuration.json
 sudo cp /opt/Notify_API/configuration.json.sam /opt/Notify_API/configuration.json
