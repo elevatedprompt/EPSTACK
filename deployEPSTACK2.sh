@@ -22,7 +22,7 @@ sudo sed -i 's/# cluster.name: my-application/ cluster.name: EPSTACK/' /etc/elas
 sudo sed -i 's/# network.host: 192.168.0.1/ network.host: 127.0.0.1/' /etc/elasticsearch/elasticsearch.yml
 sudo service elasticsearch restart
 ## Install Kibana Service
-echo "deb http://packages.elastic.co/kibana/4.4/debian stable main" | sudo tee -a /etc/apt/sources.list.d/kibana-4.4.x.list
+echo "deb http://packages.elastic.co/kibana/4.6/debian stable main" | sudo tee -a /etc/apt/sources.list.d/kibana-4.4.x.list
 sudo apt-get update
 sudo apt-get -y install kibana
 sudo update-rc.d kibana defaults 96 9
