@@ -7,6 +7,10 @@
 
   cd EPSTACK
 
-  chmod +x deployEPSTACK.sh
+  chmod +x deployEPSTACKx.sh
 
   ./deployEPSTACK.sh
+
+  EPSTACK2 ==> ELK 2.x
+  EPSTACK5 ==> ELK 5.x
+  
